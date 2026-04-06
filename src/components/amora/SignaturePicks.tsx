@@ -1,23 +1,28 @@
 import { useScrollReveal } from "@/hooks/useScrollReveal";
-import { Star, Coffee, Cake } from "lucide-react";
+import { Star } from "lucide-react";
+import sigSpanish from "@/assets/signature-spanish-latte.jpg";
+import sigCortado from "@/assets/signature-cortado.jpg";
+import sigV60 from "@/assets/signature-v60.jpg";
+import sigDevil from "@/assets/signature-devils-cake.jpg";
+import sigNutella from "@/assets/signature-nutella.jpg";
 
 const picks = [
-  { name: "Spanish Latte", desc: "Creamy, sweet, and perfectly balanced", icon: Coffee, color: "from-amber-100 to-orange-100 dark:from-amber-900/30 dark:to-orange-900/30" },
-  { name: "Cortado", desc: "Bold espresso cut with velvety milk", icon: Coffee, color: "from-stone-100 to-amber-100 dark:from-stone-900/30 dark:to-amber-900/30" },
-  { name: "V60 Ethiopian", desc: "Fruity & floral single-origin pour-over", icon: Coffee, color: "from-emerald-50 to-amber-50 dark:from-emerald-900/30 dark:to-amber-900/30" },
-  { name: "Devil's Cake", desc: "Rich, decadent chocolate indulgence", icon: Cake, color: "from-rose-50 to-amber-50 dark:from-rose-900/30 dark:to-amber-900/30" },
-  { name: "Nutella Cake", desc: "Hazelnut chocolate heaven in every bite", icon: Cake, color: "from-amber-50 to-yellow-50 dark:from-amber-900/30 dark:to-yellow-900/30" },
+  { name: "Spanish Latte", desc: "Creamy, sweet, and perfectly balanced", image: sigSpanish },
+  { name: "Cortado", desc: "Bold espresso cut with velvety milk", image: sigCortado },
+  { name: "V60 Ethiopian", desc: "Fruity & floral single-origin pour-over", image: sigV60 },
+  { name: "Devil's Cake", desc: "Rich, decadent chocolate indulgence", image: sigDevil },
+  { name: "Nutella Cake", desc: "Hazelnut chocolate heaven in every bite", image: sigNutella },
 ];
 
 export default function SignaturePicks() {
   const { ref, isVisible } = useScrollReveal();
 
   return (
-    <section className="py-24 lg:py-32 bg-secondary/30">
+    <section className="py-28 lg:py-40 bg-secondary/30">
       <div ref={ref} className={`max-w-7xl mx-auto px-6 lg:px-8 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
-        <div className="text-center mb-16">
-          <p className="text-sm font-medium text-accent tracking-widest uppercase mb-3">⭐ Signature Picks</p>
-          <h2 className="font-display text-3xl sm:text-4xl font-bold text-foreground">
+        <div className="text-center mb-20">
+          <p className="text-sm font-medium text-accent tracking-[0.2em] uppercase mb-4">⭐ Signature Picks</p>
+          <h2 className="font-display text-4xl sm:text-5xl font-bold text-foreground">
             Our Guests' Favorites
           </h2>
         </div>
@@ -26,18 +31,24 @@ export default function SignaturePicks() {
           {picks.map((p, i) => (
             <div
               key={p.name}
-              className={`group rounded-2xl bg-gradient-to-br ${p.color} p-6 border border-border hover:shadow-2xl hover:-translate-y-2 transition-all duration-500`}
-              style={{ animationDelay: `${i * 100}ms` }}
+              className="group rounded-3xl bg-card border border-border overflow-hidden hover:shadow-2xl hover:-translate-y-3 transition-all duration-500"
             >
-              <div className="bg-card/60 backdrop-blur rounded-xl p-3 w-fit mb-4">
-                <p.icon className="h-6 w-6 text-primary" />
+              <div className="aspect-square overflow-hidden">
+                <img
+                  src={p.image}
+                  alt={p.name}
+                  loading="lazy"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                />
               </div>
-              <h3 className="font-display font-bold text-foreground mb-2">{p.name}</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">{p.desc}</p>
-              <div className="flex items-center gap-1 mt-4">
-                {[...Array(5)].map((_, j) => (
-                  <Star key={j} className="h-3.5 w-3.5 fill-gold text-gold" />
-                ))}
+              <div className="p-5">
+                <h3 className="font-display font-bold text-foreground mb-1.5">{p.name}</h3>
+                <p className="text-xs text-muted-foreground leading-relaxed">{p.desc}</p>
+                <div className="flex items-center gap-0.5 mt-3">
+                  {[...Array(5)].map((_, j) => (
+                    <Star key={j} className="h-3 w-3 fill-gold text-gold" />
+                  ))}
+                </div>
               </div>
             </div>
           ))}
