@@ -13,10 +13,10 @@ export default function Experience() {
   const { ref, isVisible } = useScrollReveal();
 
   return (
-    <section id="experience" className="py-28 lg:py-40 bg-secondary/30">
+    <section id="experience" className="py-28 lg:py-40">
       <div ref={ref} className={`max-w-7xl mx-auto px-6 lg:px-8 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
         <div className="text-center mb-20">
-          <p className="text-sm font-medium text-accent tracking-[0.2em] uppercase mb-4">The Amora Experience</p>
+          <p className="text-sm font-medium text-accent tracking-[0.25em] uppercase mb-4">The Experience</p>
           <h2 className="font-display text-4xl sm:text-5xl font-bold text-foreground">
             Your Space, <span className="italic font-normal">Your Way</span>
           </h2>
@@ -26,7 +26,7 @@ export default function Experience() {
           {experiences.map((e) => (
             <div
               key={e.title}
-              className="group rounded-3xl overflow-hidden bg-card border border-border hover:shadow-2xl hover:-translate-y-2 transition-all duration-500"
+              className="group rounded-[24px] overflow-hidden glass-card hover:shadow-2xl hover:-translate-y-2 transition-all duration-500"
             >
               <div className="aspect-[4/3] overflow-hidden">
                 <img
