@@ -1,5 +1,6 @@
 import { useScrollReveal } from "@/hooks/useScrollReveal";
-import aboutImg from "@/assets/about-interior.jpg";
+import aboutImg from "@/assets/cafe-seating.png";
+import counterImg from "@/assets/cafe-counter.png";
 
 export default function About() {
   const { ref, isVisible } = useScrollReveal();
@@ -16,14 +17,18 @@ export default function About() {
           <div className="aspect-[4/5] rounded-[24px] overflow-hidden shadow-2xl">
             <img
               src={aboutImg}
-              alt="Amora Café cozy interior"
+              alt="Amora Café cozy seating area"
               loading="lazy"
               className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
             />
           </div>
-          <div className="absolute -bottom-6 -right-4 lg:-right-8 glass-card rounded-[20px] p-6 shadow-2xl">
-            <p className="font-display text-4xl font-bold text-primary">5+</p>
-            <p className="text-sm text-muted-foreground mt-1">Years of Passion</p>
+          <div className="absolute -bottom-6 -right-4 lg:-right-8 w-40 h-40 rounded-[20px] overflow-hidden shadow-2xl border-4 border-background">
+            <img
+              src={counterImg}
+              alt="Amora Café counter"
+              loading="lazy"
+              className="w-full h-full object-cover"
+            />
           </div>
         </div>
 
