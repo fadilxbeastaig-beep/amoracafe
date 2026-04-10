@@ -1,8 +1,8 @@
 import Navbar from "@/components/amora/Navbar";
 import Hero from "@/components/amora/Hero";
 import About from "@/components/amora/About";
+import WhyChooseUs from "@/components/amora/WhyChooseUs";
 import MenuSection from "@/components/amora/MenuSection";
-import SignaturePicks from "@/components/amora/SignaturePicks";
 import Reviews from "@/components/amora/Reviews";
 import Experience from "@/components/amora/Experience";
 import InstagramGallery from "@/components/amora/InstagramGallery";
@@ -15,8 +15,8 @@ const Index = () => {
       <Navbar />
       <Hero />
       <About />
+      <WhyChooseUs />
       <MenuSection />
-      <SignaturePicks />
       <Reviews />
       <Experience />
       <InstagramGallery />

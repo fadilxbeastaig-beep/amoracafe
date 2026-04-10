@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
-import { Menu, X, Moon, Sun, ShoppingBag } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Menu, X, Moon, Sun } from "lucide-react";
 import { useDarkMode } from "@/hooks/useDarkMode";
 import logo from "@/assets/amora-logo.png";
 
@@ -9,7 +8,6 @@ const links = [
   { label: "About", href: "#about" },
   { label: "Menu", href: "#menu" },
   { label: "Reviews", href: "#reviews" },
-  { label: "Experience", href: "#experience" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -36,7 +34,7 @@ export default function Navbar() {
         <a href="#home" className="flex items-center gap-3 group">
           <img
             src={logo}
-            alt="Amora Cafe"
+            alt="Amora Café"
             className="h-9 w-9 rounded-full object-cover shadow-md group-hover:shadow-lg transition-shadow"
           />
           <span className={`font-display text-xl font-semibold tracking-wide ${scrolled ? "text-foreground" : "text-white"} transition-colors`}>
@@ -71,14 +69,6 @@ export default function Navbar() {
             )}
           </button>
 
-          <Button
-            size="sm"
-            className="hidden md:inline-flex bg-white text-warm-dark hover:bg-white/90 rounded-full px-6 shadow-lg"
-          >
-            <ShoppingBag className="h-4 w-4 mr-2" />
-            Order Now
-          </Button>
-
           <button
             className="md:hidden p-2"
             onClick={() => setMobileOpen(!mobileOpen)}
@@ -105,10 +95,6 @@ export default function Navbar() {
               {l.label}
             </a>
           ))}
-          <Button className="w-full bg-primary text-primary-foreground rounded-full">
-            <ShoppingBag className="h-4 w-4 mr-2" />
-            Order Now
-          </Button>
         </div>
       )}
     </nav>

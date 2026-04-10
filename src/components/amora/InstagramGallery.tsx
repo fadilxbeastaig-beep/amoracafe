@@ -16,9 +16,9 @@ export default function InstagramGallery() {
     <section className="py-28 lg:py-40">
       <div ref={ref} className={`max-w-7xl mx-auto px-6 lg:px-8 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
         <div className="text-center mb-20">
-          <p className="text-sm font-medium text-accent tracking-[0.2em] uppercase mb-4">Gallery</p>
+          <p className="text-sm font-medium text-accent tracking-[0.25em] uppercase mb-4">Gallery</p>
           <h2 className="font-display text-4xl sm:text-5xl font-bold text-foreground mb-4">
-            Follow Our Journey
+            Follow Our <span className="italic font-normal">Journey</span>
           </h2>
         </div>
 
@@ -26,11 +26,11 @@ export default function InstagramGallery() {
           {images.map((src, i) => (
             <div
               key={i}
-              className="group aspect-square rounded-3xl overflow-hidden cursor-pointer relative"
+              className="group aspect-square rounded-[20px] overflow-hidden cursor-pointer relative"
             >
               <img
                 src={src}
-                alt={`Amora cafe gallery ${i + 1}`}
+                alt={`Amora café gallery ${i + 1}`}
                 loading="lazy"
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
               />
