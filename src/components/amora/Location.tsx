@@ -17,7 +17,7 @@ export default function Location() {
         <div className="grid lg:grid-cols-2 gap-12">
           <div className="space-y-10">
             {[
-              { icon: MapPin, title: "Address", content: "Abu Dhabi, UAE" },
+              { icon: MapPin, title: "Address", content: "Al Khaznah, Abu Dhabi, UAE" },
               { icon: Phone, title: "Phone", content: "+971 56 758 7578", href: "tel:+971567587578" },
               {
                 icon: Clock,
@@ -48,14 +48,30 @@ export default function Location() {
                 </div>
               </div>
             ))}
+
+            <a
+              href="https://maps.app.goo.gl/odqbJvuU7DWAzm7d6"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-primary font-medium hover:underline text-base mt-4"
+            >
+              <MapPin className="h-4 w-4" />
+              Open in Google Maps
+            </a>
           </div>
 
-          <div className="rounded-[24px] glass-card overflow-hidden shadow-2xl h-80 lg:h-auto flex items-center justify-center">
-            <div className="text-center space-y-4">
-              <MapPin className="h-16 w-16 mx-auto text-primary/20" />
-              <p className="font-display text-lg text-foreground font-medium">Abu Dhabi, UAE</p>
-              <p className="text-sm text-muted-foreground">Map view</p>
-            </div>
+          <div className="rounded-[24px] overflow-hidden shadow-2xl h-80 lg:h-auto min-h-[320px]">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3634.5!2d55.2!3d23.8!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5e4d9b5c8b0001%3A0x1234567890abcdef!2sAmora%20Specialty%20Cafe!5e0!3m2!1sen!2sae!4v1700000000000!5m2!1sen!2sae"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Amora Specialty Café location"
+              className="w-full h-full"
+            />
           </div>
         </div>
       </div>

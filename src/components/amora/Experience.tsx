@@ -1,12 +1,12 @@
 import { useScrollReveal } from "@/hooks/useScrollReveal";
-import dineinImg from "@/assets/experience-dinein.jpg";
-import driveImg from "@/assets/experience-drive.jpg";
-import studyImg from "@/assets/experience-study.jpg";
+import cafeDrink from "@/assets/cafe-drink.png";
+import cafeCounter from "@/assets/cafe-counter.png";
+import cafeSeating from "@/assets/cafe-seating.png";
 
 const experiences = [
-  { title: "Dine In", desc: "Relax in our beautifully designed space with warm lighting and cozy seating.", image: dineinImg },
-  { title: "Drive Through", desc: "Grab your favorite brew on the go — quick, fresh, and perfectly made.", image: driveImg },
-  { title: "Work & Study", desc: "A calm environment with great Wi-Fi — your perfect productivity spot.", image: studyImg },
+  { title: "Dine In", desc: "Relax in our beautifully designed space with warm lighting and cozy seating.", image: cafeSeating },
+  { title: "Drive Through", desc: "Grab your favorite brew on the go — quick, fresh, and perfectly made.", image: cafeDrink },
+  { title: "Work & Study", desc: "A calm environment with great Wi-Fi — your perfect productivity spot.", image: cafeCounter },
 ];
 
 export default function Experience() {

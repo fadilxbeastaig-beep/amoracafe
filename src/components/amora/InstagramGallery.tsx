@@ -1,13 +1,13 @@
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { Instagram } from "lucide-react";
+import cafeDrink from "@/assets/cafe-drink.png";
+import cafeBar from "@/assets/cafe-bar.png";
+import cafeSeating from "@/assets/cafe-seating.png";
+import cafeCounter from "@/assets/cafe-counter.png";
 import insta1 from "@/assets/insta-1.jpg";
 import insta2 from "@/assets/insta-2.jpg";
-import insta3 from "@/assets/insta-3.jpg";
-import insta4 from "@/assets/insta-4.jpg";
-import insta5 from "@/assets/insta-5.jpg";
-import insta6 from "@/assets/insta-6.jpg";
 
-const images = [insta1, insta2, insta3, insta4, insta5, insta6];
+const images = [cafeDrink, cafeBar, cafeSeating, cafeCounter, insta1, insta2];
 
 export default function InstagramGallery() {
   const { ref, isVisible } = useScrollReveal();
