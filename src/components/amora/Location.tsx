@@ -55,7 +55,7 @@ export default function Location() {
             ))}
 
             <a
-              href="https://maps.app.goo.gl/odqbJvuU7DWAzm7d6"
+              href="https://www.google.com/maps/place/Amora+Speciality+Cafe%D8%A7%D9%85%D9%88%D8%B1%D8%A7+%D8%B3%D8%A8%D9%8A%D8%B4%D9%84%D8%AA%D9%8A+%D9%83%D8%A7%D9%81%D9%8A%D8%A9%E2%80%AD/@24.1704187,55.1086065,17z/data=!4m14!1m7!3m6!1s0x3e5e4333a6684675:0xb06da0d3ca40c2a6!2zQW1vcmEgU3BlY2lhbGl0eSBDYWZl2KfZhdmI2LHYpyDYs9io2YrYtNmE2KrZiiDZg9in2YHZitip!8m2!3d24.170404!4d55.109615!16s%2Fg%2F11vqvs02rf!3m5!1s0x3e5e4333a6684675:0xb06da0d3ca40c2a6!8m2!3d24.170404!4d55.109615!16s%2Fg%2F11vqvs02rf?hl=en&entry=ttu&g_ep=EgoyMDI2MDQwOC4wIKXMDSoASAFQAw%3D%3D"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-primary font-medium hover:underline text-sm mt-2"
@@ -66,7 +66,7 @@ export default function Location() {
 
           <div className="rounded-2xl overflow-hidden h-80 lg:h-auto min-h-[320px]">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3634.5!2d55.2!3d23.8!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5e4d9b5c8b0001%3A0x1234567890abcdef!2sAmora%20Specialty%20Cafe!5e0!3m2!1sen!2sae!4v1700000000000!5m2!1sen!2sae"
+              src="https://maps.google.com/maps?hl=en&q=24.170404,55.109615&z=17&ie=UTF8&iwloc=B&output=embed"
               width="100%"
               height="100%"
               style={{ border: 0 }}
