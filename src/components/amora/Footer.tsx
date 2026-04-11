@@ -24,7 +24,7 @@ export default function Footer() {
         </a>
 
         <p className="text-sm text-muted-foreground">
-          © 2024 Amora Specialty Café · Abu Dhabi
+          © 2021-2026 Amora Specialty Café · Abu Dhabi
         </p>
       </div>
     </footer>

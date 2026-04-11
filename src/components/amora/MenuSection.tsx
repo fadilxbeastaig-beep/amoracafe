@@ -1,19 +1,11 @@
 import { useState } from "react";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { Badge } from "@/components/ui/badge";
-import menuMatcha from "@/assets/menu-matcha.jpg";
-import menuSpanishLatte from "@/assets/menu-spanish-latte.jpg";
-import menuColdBrew from "@/assets/menu-cold-brew.jpg";
-import menuCroissant from "@/assets/menu-croissant.jpg";
-import menuMojito from "@/assets/menu-mojito.jpg";
-import menuLemonMint from "@/assets/menu-lemon-mint.jpg";
-import menuCheesecake from "@/assets/menu-cheesecake.jpg";
 
 interface MenuItem {
   name: string;
   desc: string;
   price: string;
-  image?: string;
   popular?: boolean;
 }
 
@@ -33,7 +25,7 @@ const categories: Category[] = [
       { name: "Cappuccino", desc: "Velvety foam with rich espresso", price: "20" },
       { name: "Latte", desc: "Creamy steamed milk, espresso base", price: "22" },
       { name: "Flat White", desc: "Silky microfoam, double ristretto", price: "22" },
-      { name: "Spanish Latte", desc: "Sweetened condensed milk latte", price: "24", image: menuSpanishLatte, popular: true },
+      { name: "Spanish Latte", desc: "Sweetened condensed milk latte", price: "24", popular: true },
     ],
   },
   {
@@ -41,7 +33,7 @@ const categories: Category[] = [
     label: "🧊 Iced",
     items: [
       { name: "Iced Latte", desc: "Chilled espresso over cold milk", price: "24" },
-      { name: "Cold Brew", desc: "18-hour slow steeped, smooth finish", price: "22", image: menuColdBrew },
+      { name: "Cold Brew", desc: "18-hour slow steeped, smooth finish", price: "22" },
       { name: "Iced Spanish Latte", desc: "Sweet, creamy, and refreshing", price: "26", popular: true },
     ],
   },
@@ -49,7 +41,7 @@ const categories: Category[] = [
     key: "specialty",
     label: "✨ Specialty",
     items: [
-      { name: "Iced Matcha Latte", desc: "Premium ceremonial matcha with cold milk", price: "28", image: menuMatcha, popular: true },
+      { name: "Iced Matcha Latte", desc: "Premium ceremonial matcha with cold milk", price: "28", popular: true },
       { name: "Mocha", desc: "Belgian chocolate meets espresso", price: "26" },
       { name: "Chai Latte", desc: "Aromatic spiced chai, steamed milk", price: "24" },
     ],
@@ -58,17 +50,17 @@ const categories: Category[] = [
     key: "bakery",
     label: "🥐 Bakery",
     items: [
-      { name: "Butter Croissant", desc: "Flaky, golden, French-style pastry", price: "16", image: menuCroissant },
+      { name: "Butter Croissant", desc: "Flaky, golden, French-style pastry", price: "16" },
       { name: "Artisan Cookies", desc: "Freshly baked, warm from the oven", price: "14" },
-      { name: "San Sebastian Cheesecake", desc: "Creamy burnt Basque-style cheesecake", price: "32", image: menuCheesecake, popular: true },
+      { name: "San Sebastian Cheesecake", desc: "Creamy burnt Basque-style cheesecake", price: "32", popular: true },
     ],
   },
   {
     key: "refreshers",
     label: "🍋 Refreshers",
     items: [
-      { name: "Lemon Mint", desc: "Fresh citrus with garden mint", price: "18", image: menuLemonMint },
-      { name: "Mojito Passionfruit", desc: "Tropical passionfruit with mint fizz", price: "22", image: menuMojito },
+      { name: "Lemon Mint", desc: "Fresh citrus with garden mint", price: "18" },
+      { name: "Mojito Passionfruit", desc: "Tropical passionfruit with mint fizz", price: "22" },
       { name: "Fresh Juice", desc: "Seasonal pressed fruit blend", price: "20" },
       { name: "Iced Tea", desc: "Cold-brewed, lightly sweetened", price: "16" },
     ],
@@ -119,18 +111,6 @@ export default function MenuSection() {
               key={item.name}
               className="group bg-card rounded-[20px] overflow-hidden border border-border hover:shadow-xl hover:-translate-y-1 transition-all duration-500"
             >
-              {item.image && (
-                <div className="aspect-[4/3] overflow-hidden">
-                  <img
-                    src={item.image}
-                    alt={item.name}
-                    loading="lazy"
-                    width={640}
-                    height={640}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                  />
-                </div>
-              )}
               <div className="p-6">
                 <div className="flex items-start justify-between gap-3 mb-2">
                   <div className="flex items-center gap-2">
