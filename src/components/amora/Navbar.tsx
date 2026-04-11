@@ -32,7 +32,7 @@ export default function Navbar() {
     >
       <div className="max-w-6xl mx-auto px-6 flex items-center justify-between h-18">
         <a href="#home" className="flex items-center gap-3">
-          <img src={logo} alt="Amora Café" className="h-8 w-8 rounded-full object-cover" />
+          <img src={logo} alt="Amora Café" className="h-9 w-9 object-contain mix-blend-multiply dark:mix-blend-screen dark:invert" />
           <span className={`font-display text-lg font-semibold transition-colors ${scrolled ? "text-foreground" : "text-white"}`}>
             Amora
           </span>
