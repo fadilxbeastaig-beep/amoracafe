@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X, Moon, Sun } from "lucide-react";
 import { useDarkMode } from "@/hooks/useDarkMode";
+import { Button } from "@/components/ui/button";
 import logo from "@/assets/amora-logo.png";
 
 const links = [
@@ -50,6 +51,13 @@ export default function Navbar() {
               {l.label}
             </a>
           ))}
+          <Button
+            size="sm"
+            className="bg-accent text-accent-foreground hover:bg-accent/90 rounded-full px-6 text-xs font-medium"
+            asChild
+          >
+            <a href="#menu">Order Now</a>
+          </Button>
         </div>
 
         <div className="flex items-center gap-2">
@@ -91,6 +99,13 @@ export default function Navbar() {
               {l.label}
             </a>
           ))}
+          <Button
+            size="sm"
+            className="bg-accent text-accent-foreground hover:bg-accent/90 rounded-full px-6 text-xs font-medium w-full mt-2"
+            asChild
+          >
+            <a href="#menu" onClick={() => setMobileOpen(false)}>Order Now</a>
+          </Button>
         </div>
       )}
     </nav>

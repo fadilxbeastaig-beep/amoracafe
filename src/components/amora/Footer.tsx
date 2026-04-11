@@ -10,14 +10,16 @@ export default function Footer() {
           <span className="font-display text-xl font-semibold text-foreground">Amora Specialty Café</span>
         </div>
 
+        <p className="text-sm text-muted-foreground font-light italic">Made with love, served with passion.</p>
+
         <a
           href="https://instagram.com"
           target="_blank"
           rel="noopener noreferrer"
-          className="p-3 rounded-full hover:bg-primary/10 transition-colors"
+          className="p-3 rounded-full hover:bg-accent/10 transition-colors group"
           aria-label="Instagram"
         >
-          <Instagram className="h-5 w-5 text-muted-foreground hover:text-primary transition-colors" />
+          <Instagram className="h-5 w-5 text-muted-foreground group-hover:text-accent transition-colors" />
         </a>
 
         <p className="text-sm text-muted-foreground">
