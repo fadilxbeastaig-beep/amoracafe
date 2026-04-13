@@ -31,9 +31,11 @@ export default function MenuSection() {
           <h2 className="font-display text-3xl sm:text-5xl font-bold text-foreground">
             Explore Our Offerings
           </h2>
-          <div className="mt-4 inline-flex items-center gap-2 bg-accent/10 text-accent px-4 py-2 rounded-full text-sm font-semibold">
-            🎉 {DISCOUNT_PERCENTAGE}% OFF on all items
-          </div>
+          {DISCOUNT_PERCENTAGE > 0 && (
+            <div className="mt-4 inline-flex items-center gap-2 bg-accent/10 text-accent px-4 py-2 rounded-full text-sm font-semibold">
+              🎉 {DISCOUNT_PERCENTAGE}% OFF on all items
+            </div>
+          )}
         </div>
 
         {/* Category Tabs */}
@@ -80,11 +82,13 @@ export default function MenuSection() {
                       )}
                     </div>
                     <div className="text-right whitespace-nowrap shrink-0">
-                      <span className="text-xs text-muted-foreground line-through mr-1.5">
-                        {CURRENCY} {item.original_price}
-                      </span>
+                      {DISCOUNT_PERCENTAGE > 0 && (
+                        <span className="text-xs text-muted-foreground line-through mr-1.5">
+                          {CURRENCY} {item.original_price}
+                        </span>
+                      )}
                       <span className="text-sm font-semibold text-primary">
-                        {CURRENCY} {salePrice}
+                        {CURRENCY} {DISCOUNT_PERCENTAGE > 0 ? salePrice : item.original_price}
                       </span>
                     </div>
                   </div>
