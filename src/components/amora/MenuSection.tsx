@@ -7,7 +7,6 @@ import {
   CURRENCY,
   POPULAR_ITEMS,
 } from "@/data/menuData";
-import { menuImages } from "@/data/menuImages";
 
 export default function MenuSection() {
   const [active, setActive] = useState(0);
@@ -61,23 +60,38 @@ export default function MenuSection() {
           {cat.items.map((item) => {
             const isPopular = POPULAR_ITEMS.includes(item.name);
             const salePrice = discountedPrice(item.original_price);
-            const image = menuImages[item.name];
+            const placeholderLabel = item.name
+              .split(" ")
+              .slice(0, 2)
+              .map((word) => word[0])
+              .join("")
+              .toUpperCase();
 
             return (
               <div
                 key={item.name}
                 className="group bg-card rounded-[20px] overflow-hidden border border-border hover:shadow-xl hover:-translate-y-1 transition-all duration-500"
               >
-                {image && (
-                  <div className="w-full h-48 overflow-hidden">
+                <div className="relative w-full h-48 overflow-hidden bg-secondary/30">
+                  {item.image_url ? (
                     <img
-                      src={image}
+                      src={item.image_url}
                       alt={item.name}
                       loading="lazy"
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
-                  </div>
-                )}
+                  ) : (
+                    <div className="flex h-full w-full flex-col items-center justify-center bg-[radial-gradient(circle_at_top,_hsl(var(--accent)/0.22),_transparent_58%),linear-gradient(135deg,_hsl(var(--secondary))_0%,_hsl(var(--background))_100%)] text-center">
+                      <span className="mb-3 flex h-14 w-14 items-center justify-center rounded-full border border-border/70 bg-background/80 text-lg font-semibold text-foreground shadow-sm">
+                        {placeholderLabel}
+                      </span>
+                      <span className="px-6 text-sm font-medium text-muted-foreground">
+                        Image coming soon
+                      </span>
+                    </div>
+                  )}
+                  <div className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-black/25 to-transparent pointer-events-none" />
+                </div>
                 <div className="p-6">
                   <div className="flex items-start justify-between gap-3 mb-2">
                     <div className="flex items-center gap-2 flex-wrap">
