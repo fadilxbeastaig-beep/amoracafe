@@ -93,8 +93,8 @@ export const menuCategories: MenuCategory[] = [
     category: "Pastry",
     icon: "🥐",
     items: [
-      { name: "Plain Croissant", original_price: 15, image_url: new URL("../assets/menu/plaincroissant.jpeg", import.meta.url).href },
-      { name: "Pistachio Croissant", original_price: 20, image_url: new URL("../assets/menu/pistachiocroissant.jpeg", import.meta.url).href },
+      { name: "Plain Croissant", original_price: 15, image_url: new URL("../assets/menu/plaincrossaint.jpeg", import.meta.url).href },
+      { name: "Pistachio Croissant", original_price: 20, image_url: new URL("../assets/menu/pistachiocrossaint.jpeg", import.meta.url).href },
       { name: "Nutella Croissant", original_price: 20, image_url: new URL("../assets/menu/nutellacroissant.jpeg", import.meta.url).href },
       { name: "Halloumi Croissant", original_price: 23, image_url: new URL("../assets/menu/halloumicroissant.jpeg", import.meta.url).href },
       { name: "Egg & Cheese Croissant", original_price: 20, image_url: new URL("../assets/menu/eggandcheesecroissant.jpeg", import.meta.url).href },
