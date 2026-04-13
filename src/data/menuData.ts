@@ -10,7 +10,7 @@ export interface MenuCategory {
   items: MenuItem[];
 }
 
-export const DISCOUNT_PERCENTAGE = 35;
+export const DISCOUNT_PERCENTAGE = 0;
 export const CURRENCY = "AED";
 
 export const menuCategories: MenuCategory[] = [
