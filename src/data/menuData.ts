@@ -65,7 +65,7 @@ export const menuCategories: MenuCategory[] = [
       { name: "Red Rush", original_price: 35, image_url: new URL("../assets/menu/redrush.jpeg", import.meta.url).href },
       { name: "Green Delight", original_price: 28, image_url: new URL("../assets/menu/greendelight.jpeg", import.meta.url).href },
       { name: "Mango Dragon Fruit", original_price: 30, image_url: new URL("../assets/menu/mangodragonfruit.jpeg", import.meta.url).href },
-      { name: "Peach Ice Tea", original_price: 30, image_url: new URL("../assets/menu/peachicetea.jpeg", import.meta.url).href },
+      { name: "Peach Ice Tea", original_price: 30, image_url: new URL("../assets/menu/amora.jpeg", import.meta.url).href },
       { name: "Pistachio Milkshake", original_price: 35, image_url: new URL("../assets/menu/pistachiomilkshake.jpeg", import.meta.url).href },
     ],
   },
