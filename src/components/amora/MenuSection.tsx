@@ -7,6 +7,7 @@ import {
   CURRENCY,
   POPULAR_ITEMS,
 } from "@/data/menuData";
+import { menuImages } from "@/data/menuImages";
 
 export default function MenuSection() {
   const [active, setActive] = useState(0);
@@ -60,12 +61,23 @@ export default function MenuSection() {
           {cat.items.map((item) => {
             const isPopular = POPULAR_ITEMS.includes(item.name);
             const salePrice = discountedPrice(item.original_price);
+            const image = menuImages[item.name];
 
             return (
               <div
                 key={item.name}
                 className="group bg-card rounded-[20px] overflow-hidden border border-border hover:shadow-xl hover:-translate-y-1 transition-all duration-500"
               >
+                {image && (
+                  <div className="w-full h-48 overflow-hidden">
+                    <img
+                      src={image}
+                      alt={item.name}
+                      loading="lazy"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                  </div>
+                )}
                 <div className="p-6">
                   <div className="flex items-start justify-between gap-3 mb-2">
                     <div className="flex items-center gap-2 flex-wrap">
