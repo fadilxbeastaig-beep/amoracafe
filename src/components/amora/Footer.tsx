@@ -14,7 +14,7 @@ export default function Footer() {
         <p className="text-sm text-muted-foreground font-light italic">Made with love, served with passion.</p>
 
         <a
-          href="https://instagram.com"
+          href="https://www.instagram.com/amoracafe.ae/"
           target="_blank"
           rel="noopener noreferrer"
           className="p-3 rounded-full hover:bg-accent/10 transition-colors group"
@@ -24,7 +24,7 @@ export default function Footer() {
         </a>
 
         <p className="text-sm text-muted-foreground">
-          © 2021-2026 Amora Specialty Café · Abu Dhabi
+          © 2023-2026 Amora Specialty Café · Abu Dhabi
         </p>
       </div>
     </footer>

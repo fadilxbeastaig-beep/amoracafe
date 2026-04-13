@@ -63,7 +63,7 @@ export default function Hero() {
           </div>
 
           <div className="absolute -right-5 top-10 hidden rounded-full border border-[#dbc4a2] bg-[#f8efe2]/80 px-5 py-3 text-[0.72rem] font-semibold uppercase tracking-[0.24em] text-[#7b5d3e] shadow-md backdrop-blur-sm xl:block">
-            Since 2021
+            Since 2023
           </div>
         </div>
       </div>
