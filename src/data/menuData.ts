@@ -61,9 +61,7 @@ export const menuCategories: MenuCategory[] = [
       { name: "Amora Signature Drink", original_price: 35, image_url: new URL("../assets/menu/amorasignaturedrink.jpeg", import.meta.url).href },
       { name: "Acai Smoothie", original_price: 35, image_url: new URL("../assets/menu/acaismoothie.jpeg", import.meta.url).href },
       { name: "Passion Fruit Mojito", original_price: 28, image_url: new URL("../assets/menu/passionfruitmojito.jpeg", import.meta.url).href },
-      { name: "Hibiscus", original_price: 30, image_url: new URL("../assets/menu/hibiscus.jpeg", import.meta.url).href },
-      { name: "Red Rush", original_price: 35, image_url: new URL("../assets/menu/redrush.jpeg", import.meta.url).href },
-      { name: "Green Delight", original_price: 28, image_url: new URL("../assets/menu/greendelight.jpeg", import.meta.url).href },
+      { name: "Hibiscus", original_price: 30, image_url: new URL("../assets/menu/redrush.jpeg", import.meta.url).href },
       { name: "Mango Dragon Fruit", original_price: 30, image_url: new URL("../assets/menu/mangodragonfruit.jpeg", import.meta.url).href },
       { name: "Peach Ice Tea", original_price: 30, image_url: new URL("../assets/menu/amora.jpeg", import.meta.url).href },
       { name: "Pistachio Milkshake", original_price: 35, image_url: new URL("../assets/menu/pistachiomilkshake.jpeg", import.meta.url).href },
@@ -86,7 +84,7 @@ export const menuCategories: MenuCategory[] = [
       { name: "Vanilla Iced Muffin", original_price: 12, image_url: new URL("../assets/menu/vanillaicedmuffin.jpeg", import.meta.url).href },
       { name: "Chocolate Muffin", original_price: 15, image_url: new URL("../assets/menu/chocolatemuffin.jpeg", import.meta.url).href },
       { name: "Blueberry Muffin", original_price: 15, image_url: new URL("../assets/menu/blueberrymuffin.jpeg", import.meta.url).href },
-      { name: "Cosmos", original_price: 32, image_url: new URL("../assets/menu/cosmos.jpeg", import.meta.url).href },
+      
     ],
   },
   {
@@ -115,7 +113,7 @@ export const menuCategories: MenuCategory[] = [
     items: [
       { name: "Beetroot Salad", original_price: 30, image_url: new URL("../assets/menu/beetrootsalad.jpeg", import.meta.url).href },
       { name: "Caesar Salad", original_price: 32, image_url: new URL("../assets/menu/caesarsalad.jpeg", import.meta.url).href },
-      { name: "Amora Signature Salad", original_price: 36, image_url: new URL("../assets/menu/amorasignaturesalad.jpeg", import.meta.url).href },
+      
     ],
   },
   {
@@ -126,7 +124,7 @@ export const menuCategories: MenuCategory[] = [
       { name: "Beef Burger", original_price: 35, image_url: new URL("../assets/menu/beefburger.jpeg", import.meta.url).href },
       { name: "Chicken Ranch Pizza", original_price: 55, image_url: new URL("../assets/menu/chickenranchpizza.jpeg", import.meta.url).href },
       { name: "Pepperoni Pizza", original_price: 45, image_url: new URL("../assets/menu/pepperonipizza.jpeg", import.meta.url).href },
-      { name: "Vegetarian Pizza", original_price: 35, image_url: new URL("../assets/menu/vegetarianpizza.jpeg", import.meta.url).href },
+      
       { name: "Chicken Burger", original_price: 24, image_url: new URL("../assets/menu/chickenburger.jpeg", import.meta.url).href },
       { name: "Chicken Wraps with Salad", original_price: 24, image_url: new URL("../assets/menu/chickenwrapswithsalad.jpeg", import.meta.url).href },
     ],
