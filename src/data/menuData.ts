@@ -52,7 +52,7 @@ export const menuCategories: MenuCategory[] = [
       { name: "Iced Saffron Latte", original_price: 30, image_url: new URL("../assets/menu/icedsaffronlatte.jpeg", import.meta.url).href },
       { name: "Kunafa Pistachio Milkshake", original_price: 35, image_url: new URL("../assets/menu/pistachiokunafshake.jpeg", import.meta.url).href },
       { name: "Mango Matcha", original_price: 30, image_url: new URL("../assets/menu/mangomatcha.jpeg", import.meta.url).href },
-      { name: "Lychee Matcha", original_price: 30, image_url: new URL("../assets/menu/lycheematcha.jpeg", import.meta.url).href },
+      
       { name: "Coconut Mango Shake", original_price: 32, image_url: new URL("../assets/menu/coconutmangoshake.jpeg", import.meta.url).href },
       { name: "Iced Chocolate", original_price: 35, image_url: new URL("../assets/menu/icedchocolate.jpeg", import.meta.url).href },
       { name: "Strawberry Mojito", original_price: 28, image_url: new URL("../assets/menu/strawberrymojito.jpeg", import.meta.url).href },
@@ -79,7 +79,7 @@ export const menuCategories: MenuCategory[] = [
       { name: "Nutella Cake", original_price: 30, image_url: new URL("../assets/menu/nutellacake.jpeg", import.meta.url).href },
       { name: "Sebastian Cheesecake", original_price: 35, image_url: new URL("../assets/menu/sebastiancheesecake.jpeg", import.meta.url).href },
       { name: "Tiramisu", original_price: 35, image_url: new URL("../assets/menu/tiramisu.jpeg", import.meta.url).href },
-      { name: "Drowning Chocolate Chip Cookies", original_price: 25, image_url: new URL("../assets/menu/amora.jpeg", import.meta.url).href },
+      { name: "Drowning Chocolate Chip Cookies", original_price: 25, image_url: new URL("../assets/menu/drowningkindercookies.jpeg", import.meta.url).href },
       { name: "Drowning Kinder Cookies", original_price: 27, image_url:  new URL("../assets/menu/drowningkindercookies.jpeg", import.meta.url).href },
       { name: "Vanilla Iced Muffin", original_price: 12, image_url: new URL("../assets/menu/vanillaicedmuffin.jpeg", import.meta.url).href },
       { name: "Chocolate Muffin", original_price: 15, image_url: new URL("../assets/menu/chocolatemuffin.jpeg", import.meta.url).href },
